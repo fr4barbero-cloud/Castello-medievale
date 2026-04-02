@@ -223,189 +223,152 @@
     }
 
     @media (max-width: 980px) {
-      .title-audio-row {
-        align-items: flex-start;
-      }
+  body { overflow: auto; }
 
-      .audio-controls button {
-        font-size: 14px;
-        padding: 8px 10px;
-      }
-    }
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    min-height: 100vh;
+  }
 
-    .close-btn {
-      background: rgba(90, 70, 49, 0.82);
-      color: white;
-      border: none;
-      border-radius: 12px;
-      padding: 8px 10px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+  .sidebar {
+    padding: 14px;
+  }
 
-    .tag {
-      display: inline-block;
-      background: rgba(236, 215, 186, 0.78);
-      color: #5a4631;
-      padding: 6px 10px;
-      border-radius: 999px;
-      margin-bottom: 10px;
-      font-size: 13px;
-      font-weight: 700;
-      border: 1px solid rgba(90,70,49,.18);
-    }
+  .sidebar h1 {
+    font-size: 24px;
+  }
 
-    .modal-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr; direction: rtl;
-      gap: 18px;
-      align-items: stretch;
-      min-height: 0;
-    
-      flex: 1;
-      height: calc(min(86vh, 760px) - 120px);
-    }
+  .viewer-wrap {
+    min-height: 58vh;
+  }
 
-    .panel { direction: ltr;
-      background: rgba(255,255,255,0.18);
-      border: 1px solid rgba(255,255,255,0.32);
-      border-radius: 18px;
-      padding: 14px;
-      backdrop-filter: blur(4px);
-      display: flex;
-      flex-direction: column;
-      -webkit-backdrop-filter: blur(4px);
-      min-height: 0;
-    }
+  .modal-backdrop {
+    padding: 10px;
+    align-items: stretch;
+  }
 
-    .panel h3 {
-      margin: 0 0 8px;
-      font-size: 17px;
-      color: #4b3826;
-    }
+  .modal {
+    width: 100%;
+    max-height: 94vh;
+    border-radius: 18px;
+    padding: 12px;
+  }
 
-    .flip-card-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
+  .modal-top {
+    gap: 10px;
+  }
 
-    .flip-note {
-      font-size: 14px;
-      color: #4b3826;
-      text-align: center;
-      background: rgba(255,255,255,.28);
-      border-radius: 12px;
-      padding: 8px 10px;
-      max-width: 320px;
-    }
+  .modal h2 {
+    font-size: 24px;
+  }
 
-    .flip-card {
-      width: min(100%, 420px);
-      aspect-ratio: 4 / 4.6;
-      perspective: 1200px;
-      cursor: pointer;
-    }
+  .modal-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow-y: auto;
+  }
 
-    .flip-card-inner {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transition: transform .8s ease;
-      transform-style: preserve-3d;
-    }
+  .panel {
+    min-height: auto;
+  }
 
-    .flip-card.flipped .flip-card-inner {
-      transform: rotateY(180deg);
-    }
+  .title-audio-row {
+    align-items: flex-start;
+  }
 
-    .flip-face {
-      position: absolute;
-      inset: 0;
-      border-radius: 18px;
-      backface-visibility: hidden;
-      overflow: hidden;
-      border: 1px solid rgba(90,70,49,.2);
-      box-shadow: 0 10px 24px rgba(0,0,0,.14);
-      background-size: contain;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-color: rgba(255,255,255,.35);
-    }
+  .audio-controls button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
 
-    .flip-front {
-      background-image: linear-gradient(rgba(255,255,255,.08), rgba(255,255,255,.08)), url("castello.png.png");
-    }
+  .flip-card-wrap {
+    justify-content: flex-start;
+    height: auto;
+    padding-top: 2px;
+  }
 
-    .flip-back {
-      transform: rotateY(180deg);
-      background-image: linear-gradient(rgba(255,255,255,.08), rgba(255,255,255,.08)), url("castello.png.png");
-    }
+  .card-top-row {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 2px;
+  }
 
-    .face-label {
-      position: absolute;
-      left: 12px;
-      bottom: 12px;
-      background: rgba(48,36,22,.74);
-      color: #fff5e7;
-      border-radius: 12px;
-      padding: 8px 10px;
-      font-weight: 700;
-      font-size: 14px;
-    }
+  .card-instruction {
+    font-size: 15px;
+    line-height: 1.2;
+  }
 
-    .text-box {
-      width: 100%;
-      height: 100%;
-      flex: 1;
-      min-height: 0;
-      resize: none;
-      border-radius: 16px;
-      border: 1px solid rgba(90,70,49,.18);
-      padding: 16px;
-      font-size: 19px;
-      line-height: 1.55;
-      font-weight: 500;
-      background: rgba(255,255,255,.42);
-      color: #2d2418;
-      outline: none;
-    }
+  .audio-personaggi {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
 
-    .text-box:focus {
-      border-color: rgba(90,70,49,.45);
-      box-shadow: 0 0 0 3px rgba(255,255,255,.2);
-    }
+  .flip-card {
+    width: min(100%, 320px);
+  }
 
-    .question-line {
-      font-size: 24px;
-      line-height: 1.25;
-      margin: 0 0 8px 0;
-      color: #3b2b1f;
-      font-weight: 800;
-    }
+  .text-box {
+    font-size: 17px;
+    line-height: 1.45;
+    padding: 14px;
+  }
 
-    .answer-line {
-      font-size: 19px;
-      line-height: 1.5;
-      margin: 0 0 14px 0;
-      color: #2d2418;
-    }
+  .question-line {
+    font-size: 21px;
+  }
 
-    @media (max-width: 980px) {
-      body { overflow: auto; }
-      .app {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-      }
-      .sidebar {
-        padding: 14px;
-      }
-      .sidebar h1 { font-size: 24px; }
-      .viewer-wrap { min-height: 58vh; }
-        </style>
+  .answer-line {
+    font-size: 17px;
+  }
+}
+
+.card-top-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+
+.card-instruction {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4b3826;
+  text-align: left;
+  margin: 0;
+  line-height: 1.2;
+  flex: 1;
+}
+
+.audio-personaggi {
+  background: rgba(90, 70, 49, 0.82);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background .18s ease, transform .18s ease;
+}
+
+.audio-personaggi:hover {
+  background: #a8825a;
+  transform: translateY(-1px);
+}
+
+.audio-personaggi.active {
+  background: #b43c2d;
+}
+</style>
 </head>
 <body>
   <div class="app">
@@ -433,8 +396,7 @@
           <div class="title-audio-row">
             <h2 id="modalTitle">Titolo</h2>
             <div class="audio-controls">
-              <button id="audioTesto" type="button" aria-label="Ascolta il testo della finestra" title="Ascolta il testo della finestra">🔊 Testo</button>
-              <button id="audioPersonaggi" type="button" aria-label="Ascolta i personaggi" title="Ascolta i personaggi">🔊 Personaggi</button>
+              <button id="audioTesto" type="button">🔊 Testo</button>
             </div>
           </div>
         </div>
@@ -444,7 +406,11 @@
       <div class="modal-grid">
         <section class="panel">
           
-          <div class="flip-card-wrap"><div style="font-weight:700; margin-bottom:8px; text-align:center;">Clicca sull'immagine per ruotare la card</div>
+          <div class="flip-card-wrap">
+            <div class="card-top-row">
+              <div class="card-instruction">Clicca sull'immagine per ruotare la card</div>
+              <button id="audioPersonaggi" class="audio-personaggi" type="button" aria-label="Ascolta i personaggi" title="Ascolta i personaggi">🔊 Personaggi</button>
+            </div>
             <div class="flip-card" id="flipCard" aria-label="Card interattiva">
               <div class="flip-card-inner">
                 <div class="flip-face flip-front" id="cardFront">
